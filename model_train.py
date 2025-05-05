@@ -18,7 +18,7 @@ model.fit(X, y)
 
 #  Save Model 
 joblib.dump(model, 'plant_health_model.joblib')
-print("💾 Model saved as 'plant_health_model.joblib'.")
+print(" Model saved as 'plant_health_model.joblib'.")
 
 #  Save Ideal Values from Healthy Samples 
 healthy = df[df['Plant_Health_Status'] == 'Healthy']
@@ -27,4 +27,4 @@ ideal_values = {
     'ideal_humidity': healthy['Humidity'].mean()
 }
 joblib.dump(ideal_values, 'ideal_values.joblib')
-print("💾 Ideal values saved as 'ideal_values.joblib'.")
+print(" Ideal values saved as 'ideal_values.joblib'.")
